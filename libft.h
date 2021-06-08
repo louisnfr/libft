@@ -6,7 +6,11 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/06/08 11:19:58 by lraffin          ###   ########.fr       */
+=======
+/*   Updated: 2021/06/08 00:13:02 by lraffin          ###   ########.fr       */
+>>>>>>> 6092d86cbb04023f2afc4913bd59069a480793f6
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +55,11 @@ void		*ft_memset(void *b, int c, size_t len);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putchar(char c);
 void		ft_putendl_fd(char *s, int fd);
+<<<<<<< HEAD
 void		ft_putnbr_base(unsigned long int nb, const char *base);
+=======
+void		ft_putnbr_base(int nbr, const char *base);
+>>>>>>> 6092d86cbb04023f2afc4913bd59069a480793f6
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putnbr(int n);
 void		ft_putstr_fd(char *s, int fd);
