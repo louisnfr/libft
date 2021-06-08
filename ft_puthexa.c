@@ -6,13 +6,13 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 14:05:41 by lraffin           #+#    #+#             */
-/*   Updated: 2021/06/08 15:12:10 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/06/08 17:08:36 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_printhexa(unsigned long int n, const char *base)
+static void	ft_printhexa(unsigned long n, const char *base)
 {
 	if (n > 16)
 	{
@@ -22,7 +22,7 @@ static void	ft_printhexa(unsigned long int n, const char *base)
 	else
 		write(1, &base[n], 1);
 }
-void	ft_puthexa(unsigned long int n, const char *base)
+void	ft_puthexa(unsigned long n, const char *base)
 {
 	ft_putstr("0x");
 	ft_printhexa(n, base);
