@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_u.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 19:50:43 by lraffin           #+#    #+#             */
-/*   Updated: 2021/06/08 13:56:57 by lraffin          ###   ########.fr       */
+/*   Created: 2021/06/08 13:59:43 by lraffin           #+#    #+#             */
+/*   Updated: 2021/06/08 14:00:11 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+void	ft_putnbr_u(unsigned int n)
 {
-	long	nbr;
-
-	nbr = n;
-	if (nbr < 0)
+	if (n > 9)
 	{
-		ft_putchar('-');
-		nbr = -nbr;
-	}
-	if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
 	}
 	else
-		ft_putchar(nbr + 48);
+		ft_putchar(n + 48);
 }

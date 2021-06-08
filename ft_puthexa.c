@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 19:50:43 by lraffin           #+#    #+#             */
-/*   Updated: 2021/06/08 13:56:57 by lraffin          ###   ########.fr       */
+/*   Created: 2021/06/08 14:05:41 by lraffin           #+#    #+#             */
+/*   Updated: 2021/06/08 15:12:10 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+static void	ft_printhexa(unsigned long int n, const char *base)
 {
-	long	nbr;
-
-	nbr = n;
-	if (nbr < 0)
+	if (n > 16)
 	{
-		ft_putchar('-');
-		nbr = -nbr;
-	}
-	if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		ft_printhexa(n / 16, base);
+		ft_printhexa(n % 16, base);
 	}
 	else
-		ft_putchar(nbr + 48);
+		write(1, &base[n], 1);
+}
+void	ft_puthexa(unsigned long int n, const char *base)
+{
+	ft_putstr("0x");
+	ft_printhexa(n, base);
 }
