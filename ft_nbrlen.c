@@ -6,25 +6,20 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 14:31:42 by lraffin           #+#    #+#             */
-/*   Updated: 2021/06/13 14:40:37 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/06/14 14:15:55 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(int nbr)
+int	ft_nbrlen(int n, int base_size)
 {
 	int	i;
 
-	i = 1;
-	if (nbr < 0)
+	i = 0;
+	while (n > 0)
 	{
-		nbr *= -1;
-		i++;
-	}
-	while (nbr > 9)
-	{
-		nbr /= 10;
+		n /= base_size;
 		i++;
 	}
 	return (i);
