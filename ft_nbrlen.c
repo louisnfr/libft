@@ -6,13 +6,13 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 14:31:42 by lraffin           #+#    #+#             */
-/*   Updated: 2021/06/14 14:15:55 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/06/14 16:23:16 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(int n, int base_size)
+int	ft_nbrlen(unsigned long n, int base_size)
 {
 	int	i;
 
