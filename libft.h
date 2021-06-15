@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/06/14 16:25:48 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/06/15 15:17:36 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void		ft_putnbr_u(unsigned int n);
 int			ft_putnbr_ret(int n);
 void		ft_putnbr(int n);
 void		ft_putstr_fd(char *s, int fd);
+int			ft_putstr_n_ret(char *s, int n);
 int			ft_putstr_ret(char *s);
 void		ft_putstr(const char *s);
 char		**ft_split(const char *s, char c);
@@ -72,7 +73,7 @@ char		*ft_strdup(const char *s1);
 char		*ft_strjoin(const char *s1, const char *s2);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t		ft_strlen(const char *str);
+size_t		ft_strlen(const char *s);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);

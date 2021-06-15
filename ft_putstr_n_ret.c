@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_n_ret.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/14 16:26:57 by lraffin           #+#    #+#             */
-/*   Updated: 2021/06/15 15:03:26 by lraffin          ###   ########.fr       */
+/*   Created: 2021/06/14 22:39:18 by lraffin           #+#    #+#             */
+/*   Updated: 2021/06/14 22:42:08 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(long n, int base_size)
+int	ft_putstr_n_ret(char *s, int n)
 {
-	int	i;
+	int	ret;
 
-	i = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
-	{
-		n *= -1;
-		i++;
-	}
-	while (n > 0)
-	{
-		n /= base_size;
-		i++;
-	}
-	return (i);
+	ret = 0;
+	while (s && *s && n--)
+		ret += write(1, s++, 1);
+	return (ret);
 }
