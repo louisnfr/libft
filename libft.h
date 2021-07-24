@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/07/24 17:24:41 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/07/24 17:34:51 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+int			ft_abs(int n);
 int			ft_atoi_base(char *str, const char *base);
 int			ft_atoi(const char *str);
 int			ft_bzero(void *s);

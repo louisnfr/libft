@@ -6,11 +6,12 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/07/24 16:59:40 by lraffin          ###   ########.fr        #
+#    Updated: 2021/07/24 17:32:59 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC=		ft_atoi_base.c \
+SRC=		ft_abs.c \
+			ft_atoi_base.c \
 			ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
