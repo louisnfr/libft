@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/06/20 02:04:09 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/07/24 17:14:41 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <stdio.h>
 
+# define BUFFER_SIZE 32
+
 typedef struct s_list
 {
 	void			*content;
@@ -25,7 +27,7 @@ typedef struct s_list
 
 int			ft_atoi_base(char *str, const char *base);
 int			ft_atoi(const char *str);
-void		ft_bzero(void *s, size_t n);
+void		ft_bzero(void *s);
 void		*ft_calloc(size_t count, size_t size);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
@@ -83,5 +85,6 @@ char		*ft_strtrim(const char *s1, const char *set);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
+int			get_next_line(int fd, char **line);
 
 #endif

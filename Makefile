@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/06/20 02:04:37 by lraffin          ###   ########.fr        #
+#    Updated: 2021/07/24 16:59:40 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,8 @@ SRC=		ft_atoi_base.c \
 			ft_strtrim.c \
 			ft_substr.c \
 			ft_tolower.c \
-			ft_toupper.c
+			ft_toupper.c \
+			get_next_line.c
 
 BONUS=		ft_lstadd_back.c \
 			ft_lstadd_front.c \
@@ -96,7 +97,7 @@ bonus:		$(OBJ) $(OBJ_BONUS) $(HEADERS)
 			ar rc $(NAME) $^
 			ranlib $(NAME)
 
-clean:		
+clean:
 			$(RM) *.o
 
 fclean:		clean

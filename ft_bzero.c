@@ -6,17 +6,17 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 16:32:05 by lraffin           #+#    #+#             */
-/*   Updated: 2021/04/17 23:38:37 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/07/24 17:14:56 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s)
 {
-	unsigned char	*d;
-
-	d = s;
-	while (n--)
-		*d++ = 0;
+	if (!s)
+		return (0);
+	while (*(unsigned char *)s)
+		*(unsigned char *)(s++) = 0;
+	return (0);
 }
