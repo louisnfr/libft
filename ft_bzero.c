@@ -6,13 +6,13 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 16:32:05 by lraffin           #+#    #+#             */
-/*   Updated: 2021/07/24 17:14:56 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/07/24 17:24:50 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s)
+int	ft_bzero(void *s)
 {
 	if (!s)
 		return (0);

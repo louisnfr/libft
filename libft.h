@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/07/24 17:14:41 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/07/24 17:24:41 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_list
 
 int			ft_atoi_base(char *str, const char *base);
 int			ft_atoi(const char *str);
-void		ft_bzero(void *s);
+int			ft_bzero(void *s);
 void		*ft_calloc(size_t count, size_t size);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
