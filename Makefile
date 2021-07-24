@@ -6,11 +6,21 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/07/24 17:32:59 by lraffin          ###   ########.fr        #
+#    Updated: 2021/07/24 20:02:34 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC=		ft_abs.c \
+# Name
+
+NAME = libft.a
+
+# Path
+
+OBJ_PATH = ./obj/
+
+# Binary
+
+SRC_NAME=	ft_abs.c \
 			ft_atoi_base.c \
 			ft_atoi.c \
 			ft_bzero.c \
@@ -22,6 +32,15 @@ SRC=		ft_abs.c \
 			ft_isflag.c \
 			ft_isprint.c \
 			ft_itoa.c \
+			ft_lstadd_back.c \
+			ft_lstadd_front.c \
+			ft_lstclear.c \
+			ft_lstdelone.c \
+			ft_lstiter.c \
+			ft_lstlast.c \
+			ft_lstmap.c \
+			ft_lstnew.c \
+			ft_lstsize.c \
 			ft_memccpy.c \
 			ft_memchr.c \
 			ft_memcmp.c \
@@ -64,46 +83,47 @@ SRC=		ft_abs.c \
 			ft_toupper.c \
 			get_next_line.c
 
-BONUS=		ft_lstadd_back.c \
-			ft_lstadd_front.c \
-			ft_lstclear.c \
-			ft_lstdelone.c \
-			ft_lstiter.c \
-			ft_lstlast.c \
-			ft_lstmap.c \
-			ft_lstnew.c \
-			ft_lstsize.c
+OBJ_NAME = $(SRC_NAME:.c=.o)
 
-NAME=		libft.a
+# Files
 
-CC=			gcc -I includes
+OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 
-HEADERS=	libft.h
+# Flags
 
-RM=			rm -f
+CC = gcc $(CFLAGS)
 
-CFLAGS=		-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
-OBJ=		$(SRC:.c=.o)
+# Rules
 
-OBJ_BONUS=	$(BONUS:.c=.o)
+all: $(NAME)
 
-all:		$(NAME)
+$(NAME): $(OBJ)
+	@echo "\033[34mCreation of $(NAME) ...\033[0m"
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo "\033[32m$(NAME) created\n\033[0m"
 
-$(NAME):	$(OBJ) $(HEADERS)
-			ar rc $(NAME) $^
-			ranlib $(NAME)
-
-bonus:		$(OBJ) $(OBJ_BONUS) $(HEADERS)
-			ar rc $(NAME) $^
-			ranlib $(NAME)
+$(OBJ_PATH)%.o: %.c
+	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	@$(CC) -o $@ -c $<
 
 clean:
-			$(RM) *.o
+	@echo "\033[33mRemoval of .o files of $(NAME) ...\033[0m"
+	@rm -f $(OBJ)
+	@rmdir $(OBJ_PATH) 2> /dev/null || true
+	@echo "\033[31mFiles .o deleted\n\033[0m"
 
-fclean:		clean
-			$(RM) $(NAME)
+fclean: clean
+	@echo "\033[33mRemoval of $(NAME)...\033[0m"
+	@rm -f $(NAME)
+	@echo "\033[31mBinary $(NAME) deleted\n\033[0m"
 
-re:			fclean all
+re: fclean all
 
-.PHONY:		all, clean, fclean, re, bonus
+norm:
+	@norminette -R CheckForbiddenSourceHeader $(SRC)
+	@norminette -R CheckDefine *.h
+
+.PHONY: all, clean, fclean, re, norm
