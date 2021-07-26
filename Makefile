@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/07/24 22:48:31 by lraffin          ###   ########.fr        #
+#    Updated: 2021/07/26 15:51:39 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -123,7 +123,7 @@ fclean: clean
 re: fclean all
 
 norm:
-	@norminette -R CheckForbiddenSourceHeader $(SRC)
-	@norminette -R CheckDefine *.h
+	@norminette $(SRC)
+	@norminette *.h
 
 .PHONY: all, clean, fclean, re, norm
