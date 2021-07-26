@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/07/24 17:34:51 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/07/26 19:33:09 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdio.h>
 
 # define BUFFER_SIZE 32
+# define MAX(A, B) (A > B ? A : B)
+# define MIN(A, B) (A > B ? B : A)
 
 typedef struct s_list
 {
