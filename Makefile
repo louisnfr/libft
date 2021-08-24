@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: louis <louis@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/07/26 15:51:39 by lraffin          ###   ########.fr        #
+#    Updated: 2021/08/25 00:22:03 by louis            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,25 +100,25 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	# @echo "\033[34mCreation of $(NAME) ...\033[0m"
+	@echo "\033[34mCreation of $(NAME) ...\033[0m"
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	# @echo "\033[32m$(NAME) created\n\033[0m"
+	@echo "\033[32m$(NAME) created\n\033[0m"
 
 $(OBJ_PATH)%.o: %.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@$(CC) -o $@ -c $<
 
 clean:
-	# @echo "\033[33mRemoval of .o files of $(NAME) ...\033[0m"
+	@echo "\033[33mRemoval of .o files of $(NAME) ...\033[0m"
 	@rm -f $(OBJ)
 	@rmdir $(OBJ_PATH) 2> /dev/null || true
-	# @echo "\033[31mFiles .o deleted\n\033[0m"
+	@echo "\033[31mFiles .o deleted\n\033[0m"
 
 fclean: clean
-	# @echo "\033[33mRemoval of $(NAME)...\033[0m"
+	@echo "\033[33mRemoval of $(NAME)...\033[0m"
 	@rm -f $(NAME)
-	# @echo "\033[31mBinary $(NAME) deleted\n\033[0m"
+	@echo "\033[31mBinary $(NAME) deleted\n\033[0m"
 
 re: fclean all
 
@@ -126,4 +126,10 @@ norm:
 	@norminette $(SRC)
 	@norminette *.h
 
-.PHONY: all, clean, fclean, re, norm
+push:
+	git add .
+	git status
+	git commit -m libft
+	git push
+
+.PHONY: all, clean, fclean, re, norm, push
