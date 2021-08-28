@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/07/26 19:40:14 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/08/28 02:14:09 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@
 # include <stdio.h>
 
 # define BUFFER_SIZE 32
-# define FT_MAX(A, B) (A > B ? A : B)
-# define FT_MIN(A, B) (A > B ? B : A)
-# define FT_ABS(A) (A < 0 ? -A : A)
 
 typedef struct s_list
 {
@@ -29,6 +26,8 @@ typedef struct s_list
 }	t_list;
 
 int			ft_abs(int n);
+int			ft_min(int a, int b);
+int			ft_max(int a, int b);
 int			ft_atoi_base(char *str, const char *base);
 int			ft_atoi(const char *str);
 int			ft_bzero(void *s);

@@ -3,23 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: louis <louis@student.42.fr>                +#+  +:+       +#+         #
+#    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/08/25 00:22:03 by louis            ###   ########.fr        #
+#    Updated: 2021/08/28 02:18:15 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Name
-
 NAME = libft.a
 
 # Path
-
 OBJ_PATH = ./obj/
 
 # Binary
-
 SRC_NAME=	ft_abs.c \
 			ft_atoi_base.c \
 			ft_atoi.c \
@@ -41,6 +38,8 @@ SRC_NAME=	ft_abs.c \
 			ft_lstmap.c \
 			ft_lstnew.c \
 			ft_lstsize.c \
+			ft_max.c \
+			ft_min.c \
 			ft_memccpy.c \
 			ft_memchr.c \
 			ft_memcmp.c \
@@ -86,13 +85,10 @@ SRC_NAME=	ft_abs.c \
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
 # Files
-
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 
 # Flags
-
 CC = gcc $(CFLAGS)
-
 CFLAGS = -Wall -Wextra -Werror
 
 # Rules
@@ -100,31 +96,25 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "\033[34mCreation of $(NAME) ...\033[0m"
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "\033[32m$(NAME) created\n\033[0m"
 
 $(OBJ_PATH)%.o: %.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@$(CC) -o $@ -c $<
 
 clean:
-	@echo "\033[33mRemoval of .o files of $(NAME) ...\033[0m"
 	@rm -f $(OBJ)
 	@rmdir $(OBJ_PATH) 2> /dev/null || true
-	@echo "\033[31mFiles .o deleted\n\033[0m"
 
 fclean: clean
-	@echo "\033[33mRemoval of $(NAME)...\033[0m"
 	@rm -f $(NAME)
-	@echo "\033[31mBinary $(NAME) deleted\n\033[0m"
 
 re: fclean all
 
 norm:
-	@norminette $(SRC)
-	@norminette *.h
+	-@norminette *.c
+	-@norminette *.h
 
 push:
 	git add .
