@@ -6,13 +6,13 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 02:19:40 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/01 15:03:58 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/01 15:17:16 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long	ft_atoi_long(const char *str)
+long long	ft_atol(const char *str)
 {
 	long long	value;
 	int			sign;

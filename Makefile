@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/09/01 15:04:33 by lraffin          ###   ########.fr        #
+#    Updated: 2021/09/01 15:17:53 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJ_PATH = ./obj/
 # Binary
 SRC_NAME=	ft_abs.c \
 			ft_atoi_base.c \
-			ft_atoi_long.c \
+			ft_atol.c \
 			ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
