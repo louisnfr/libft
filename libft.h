@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/08/28 02:14:09 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/01 14:45:20 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@
 # include <unistd.h>
 # include <stdio.h>
 
-# define BUFFER_SIZE 32
+# define BUFFER_SIZE	32
+# define INT_MAX		2147483647
+# define INT_MIN		-214783648
 
 typedef struct s_list
 {
