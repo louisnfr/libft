@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/01 14:45:20 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/01 15:04:22 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int			ft_abs(int n);
 int			ft_min(int a, int b);
 int			ft_max(int a, int b);
 int			ft_atoi_base(char *str, const char *base);
+long long	ft_atoi_long(const char *str);
 int			ft_atoi(const char *str);
 int			ft_bzero(void *s);
 void		*ft_calloc(size_t count, size_t size);
