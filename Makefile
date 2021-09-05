@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/09/01 15:17:53 by lraffin          ###   ########.fr        #
+#    Updated: 2021/09/05 13:20:07 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,6 +79,7 @@ SRC_NAME=	ft_abs.c \
 			ft_strrchr.c \
 			ft_strtrim.c \
 			ft_substr.c \
+			ft_swap.c \
 			ft_tolower.c \
 			ft_toupper.c \
 			get_next_line.c
