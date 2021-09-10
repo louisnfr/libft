@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/09 05:24:34 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/10 20:10:58 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,10 +84,7 @@ int	get_next_line(int fd, char **line)
 		*line = ft_current_line(*line);
 	ft_next_line(buf[fd], ft_newline(buf[fd]));
 	if (ret == 0)
-	{
-		free(line);
 		return (ft_bzero(buf[fd]));
-	}
 	free(line);
 	return (1);
 }
