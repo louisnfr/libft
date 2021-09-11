@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/11 00:24:51 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/11 15:39:24 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,28 +62,28 @@ static void	ft_next_line(char *s, size_t start)
 
 int	get_next_line(int fd, char **line)
 {
-	static char	buf[1024][BUFFER_SIZE + 1];
+	static char	buf[BUFFER_SIZE + 1];
 	int			ret;
 
-	if (!line || BUFFER_SIZE <= 0 || (read(fd, buf[fd], 0) == -1))
+	if (!line || BUFFER_SIZE <= 0 || (read(fd, buf, 0) == -1))
 		return (-1);
 	ret = 1;
-	*line = malloc(sizeof(char));
-	*line = ft_strjoin(*line, buf[fd]);
+	*line = ft_strdup("");
+	*line = ft_strjoin(*line, buf);
 	while (!ft_newline(*line) && ret > 0)
 	{
-		ret = read(fd, buf[fd], BUFFER_SIZE);
-		buf[fd][ret] = 0;
+		ret = read(fd, buf, BUFFER_SIZE);
+		buf[ret] = 0;
 		if (ret == 0)
 			break ;
 		if (ret == -1)
 			return (-1);
-		*line = ft_strjoin(*line, buf[fd]);
+		*line = ft_strjoin(*line, buf);
 	}
 	if (ft_newline(*line))
 		*line = ft_current_line(*line);
-	ft_next_line(buf[fd], ft_newline(buf[fd]));
+	ft_next_line(buf, ft_newline(buf));
 	if (ret == 0)
-		return (ft_bzero(buf[fd]));
+		return (ft_bzero(buf));
 	return (1);
 }
