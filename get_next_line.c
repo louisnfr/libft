@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/10 20:10:58 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/11 00:24:51 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	get_next_line(int fd, char **line)
 	if (!line || BUFFER_SIZE <= 0 || (read(fd, buf[fd], 0) == -1))
 		return (-1);
 	ret = 1;
-	*line = ft_strdup("");
+	*line = malloc(sizeof(char));
 	*line = ft_strjoin(*line, buf[fd]);
 	while (!ft_newline(*line) && ret > 0)
 	{
@@ -85,6 +85,5 @@ int	get_next_line(int fd, char **line)
 	ft_next_line(buf[fd], ft_newline(buf[fd]));
 	if (ret == 0)
 		return (ft_bzero(buf[fd]));
-	free(line);
 	return (1);
 }

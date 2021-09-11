@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/05 13:21:05 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/11 00:13:25 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char		**ft_split(const char *s, char c);
 char		*ft_strchr(const char *s, int c);
 int			ft_strcmp(char *s1, char *s2);
 char		*ft_strdup(const char *s1);
-char		*ft_strjoin(const char *s1, const char *s2);
+char		*ft_strjoin(char *s1, char *s2);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlen(const char *s);

@@ -6,18 +6,18 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 00:32:58 by lraffin           #+#    #+#             */
-/*   Updated: 2021/06/15 15:17:28 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/10 23:57:20 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
+	size_t	ft_strlen(const char *s)
+	{
+		size_t	i;
 
-	i = 0;
-	while (s && s[i])
-		i++;
-	return (i);
-}
+		i = 0;
+		while (s && s[i])
+			i++;
+		return (i);
+	}
