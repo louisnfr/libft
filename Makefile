@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/09/05 13:20:07 by lraffin          ###   ########.fr        #
+#    Updated: 2021/09/13 16:30:02 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -124,4 +124,4 @@ push:
 	git commit -m libft
 	git push
 
-.PHONY: all, clean, fclean, re, norm, push
+.PHONY: all clean fclean re norm push
