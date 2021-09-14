@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/14 15:16:41 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/14 16:11:24 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ int	get_next_line(int fd, char **line)
 	char	*buf;
 	int		ret;
 
-	buf = malloc(sizeof(char) * 2);
-	*line = malloc(sizeof(char));
+	buf = ft_calloc(2, sizeof(char));
+	*line = ft_calloc(1, sizeof(char));
 	if (!line || (read(fd, buf, 0) < 0))
 	{
 		clean_free(&buf);
