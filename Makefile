@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/09/13 16:30:02 by lraffin          ###   ########.fr        #
+#    Updated: 2021/09/17 17:48:34 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRC_NAME=	ft_abs.c \
 			ft_putstr_ret.c \
 			ft_putstr.c \
 			ft_split.c \
+			ft_str_digit.c \
 			ft_strchr.c \
 			ft_strcmp.c \
 			ft_strdup.c \
