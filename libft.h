@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/14 16:07:17 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/17 17:48:45 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int			ft_putstr_n_ret(char *s, int n);
 int			ft_putstr_ret(char *s);
 void		ft_putstr(const char *s);
 char		**ft_split(const char *s, char c);
+int			ft_str_digit(char *s);
 char		*ft_strchr(const char *s, int c);
 int			ft_strcmp(char *s1, char *s2);
 char		*ft_strdup(const char *s1);
