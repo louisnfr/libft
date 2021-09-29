@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/17 17:48:45 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/29 13:51:52 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strrchr(const char *s, int c);
-char		*ft_strtrim(const char *s1, const char *set);
+char		*ft_strtrim(char *s1, char *set);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
 void		ft_swap(int *a, int *b);
 int			ft_tolower(int c);

@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 22:01:39 by lraffin           #+#    #+#             */
-/*   Updated: 2021/04/19 17:13:30 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/29 13:52:00 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	is_charset(char c, const char *set)
 	return (0);
 }
 
-char	*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(char *s1, char *set)
 {
 	char	*ret;
 	size_t	i;
@@ -48,5 +48,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 	while (b < e)
 		ret[i++] = s1[b++];
 	ret[i] = 0;
+	free(s1);
 	return (ret);
 }
