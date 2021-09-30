@@ -6,13 +6,13 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/14 16:11:24 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/09/30 16:57:51 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	clean_free(char **s)
+static void	clean_free(char **s)
 {
 	free(*s);
 	*s = NULL;
