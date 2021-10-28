@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/10/13 04:57:01 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/10/29 01:16:51 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int			ft_nbrlen_ul(unsigned long n, int base_size);
 int			ft_nbrlen(long n, int base_size);
 int			ft_put0xhexa_ret(unsigned long n, const char *base);
 void		ft_putchar_fd(char c, int fd);
-int			ft_putchar_ret(char c);
+int			ft_putchar_ret(int c);
 void		ft_putchar(char c);
 void		ft_putendl_fd(char *s, int fd);
 int			ft_puthexa_ret(unsigned int n, const char *base);
