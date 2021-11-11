@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:17:13 by lraffin           #+#    #+#             */
-/*   Updated: 2021/11/11 21:30:08 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/11/11 21:48:08 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_realloc(void *ptr, size_t size)
 	if (!size)
 		return (ptr);
 	new_ptr = malloc(size);
+	if (!new_ptr)
+		return (NULL);
 	ft_memcpy(new_ptr, ptr, size);
 	return (new_ptr);
 }
