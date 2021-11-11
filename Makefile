@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/11/11 17:48:29 by lraffin          ###   ########.fr        #
+#    Updated: 2021/11/11 21:28:08 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,12 +59,14 @@ SRC_NAME=	ft_abs.c \
 			ft_putstr_n_ret.c \
 			ft_putstr_ret.c \
 			ft_putstr.c \
+			ft_realloc.c \
 			ft_split_on_first.c \
 			ft_split.c \
 			ft_str_is_equal.c \
 			ft_str_is_digit.c \
 			ft_strchr.c \
 			ft_strcmp.c \
+			ft_strcpy.c \
 			ft_strdup.c \
 			ft_strjoin.c \
 			ft_strjoin_and_free.c \
