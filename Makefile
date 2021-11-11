@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/11/11 17:37:43 by lraffin          ###   ########.fr        #
+#    Updated: 2021/11/11 17:48:29 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,15 +33,6 @@ SRC_NAME=	ft_abs.c \
 			ft_isprint.c \
 			ft_isspace.c \
 			ft_itoa.c \
-			ft_lstadd_back.c \
-			ft_lstadd_front.c \
-			ft_lstclear.c \
-			ft_lstdelone.c \
-			ft_lstiter.c \
-			ft_lstlast.c \
-			ft_lstmap.c \
-			ft_lstnew.c \
-			ft_lstsize.c \
 			ft_max.c \
 			ft_min.c \
 			ft_memccpy.c \
