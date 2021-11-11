@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_strjoin_and_free.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2021/11/11 17:36:07 by lraffin          ###   ########.fr       */
+/*   Created: 2021/11/11 17:20:15 by lraffin           #+#    #+#             */
+/*   Updated: 2021/11/11 17:20:23 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*_strjoin(char *s1, char *s2)
+char	*ft_strjoin_and_free(char *s1, char *s2)
 {
+	size_t	i;
+	size_t	length;
 	char	*dest;
-	int		length;
-	int		i;
 
-	if (!s1 || !s2)
-		return (NULL);
+	if (!s1)
+		return (ft_strdup(s2));
 	length = ft_strlen(s1) + ft_strlen(s2);
-	dest = (char *)malloc(sizeof(char) * (length + 1));
+	dest = (char *)ft_calloc(1, sizeof(char) * (length + 1));
 	if (!dest)
 		return (NULL);
 	i = -1;
@@ -32,29 +32,4 @@ char	*_strjoin(char *s1, char *s2)
 	dest[i] = '\0';
 	clean_free(&s1);
 	return (dest);
-}
-
-int	get_next_line(int fd, char **line)
-{
-	char	*buf;
-	int		ret;
-
-	buf = ft_calloc(2, sizeof(char));
-	*line = ft_calloc(1, sizeof(char));
-	if (!line || (read(fd, buf, 0) < 0))
-	{
-		clean_free(&buf);
-		return (-1);
-	}
-	ret = 1;
-	while (ret > 0)
-	{
-		ret = read(fd, buf, 1);
-		if (buf[0] == '\n')
-			break ;
-		buf[ret] = 0;
-		*line = _strjoin(*line, buf);
-	}
-	clean_free(&buf);
-	return (ret);
 }

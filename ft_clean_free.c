@@ -1,40 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_clean_free.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 16:41:34 by lraffin           #+#    #+#             */
-/*   Updated: 2021/11/11 01:52:39 by lraffin          ###   ########.fr       */
+/*   Created: 2021/11/11 17:17:58 by lraffin           #+#    #+#             */
+/*   Updated: 2021/11/11 17:35:16 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+void	clean_free(char **str)
 {
-	char	*d;
-	size_t	i;
-	size_t	j;
-
-	if (!s1 || !s2)
-		return (NULL);
-	d = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (d == NULL)
-		return (NULL);
-	i = 0;
-	while (s1[i])
+	if (*str)
 	{
-		d[i] = s1[i];
-		i++;
+		free(*str);
+		*str = NULL;
 	}
-	j = 0;
-	while (s2[j])
-	{
-		d[i + j] = s2[j];
-		j++;
-	}
-	d[i + j] = 0;
-	return (d);
 }

@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_digit.c                                     :+:      :+:    :+:   */
+/*   ft_free_double_str.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 17:47:42 by lraffin           #+#    #+#             */
-/*   Updated: 2021/09/17 18:51:14 by lraffin          ###   ########.fr       */
+/*   Created: 2021/11/11 17:21:58 by lraffin           #+#    #+#             */
+/*   Updated: 2021/11/11 17:35:41 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_space(int c)
-{
-	return (c == 32);
-}
-
-int	ft_str_digit(char *s)
+void	free_double_str(char **str)
 {
 	int	i;
 
-	i = 0;
-	while (s && s[i])
-	{
-		if (ft_isdigit(s[i]) || is_space(s[i]) || s[i] == '-')
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	if (!str || !*str)
+		return ;
+	i = -1;
+	while (str && str[++i])
+		clean_free(&str[i]);
+	free(str);
+	str = NULL;
 }

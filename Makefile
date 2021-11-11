@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/09/17 17:48:34 by lraffin          ###   ########.fr        #
+#    Updated: 2021/11/11 17:37:43 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,15 @@ SRC_NAME=	ft_abs.c \
 			ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
+			ft_clean_free.c \
+			ft_free_double_str.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isflag.c \
 			ft_isprint.c \
+			ft_isspace.c \
 			ft_itoa.c \
 			ft_lstadd_back.c \
 			ft_lstadd_front.c \
@@ -65,12 +68,15 @@ SRC_NAME=	ft_abs.c \
 			ft_putstr_n_ret.c \
 			ft_putstr_ret.c \
 			ft_putstr.c \
+			ft_split_on_first.c \
 			ft_split.c \
-			ft_str_digit.c \
+			ft_str_is_equal.c \
+			ft_str_is_digit.c \
 			ft_strchr.c \
 			ft_strcmp.c \
 			ft_strdup.c \
 			ft_strjoin.c \
+			ft_strjoin_and_free.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
