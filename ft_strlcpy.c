@@ -6,16 +6,16 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 18:21:00 by lraffin           #+#    #+#             */
-/*   Updated: 2021/04/18 23:39:30 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/11/11 17:51:30 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+int	ft_strlcpy(char *dst, const char *src, int dstsize)
 {
-	size_t	srcsize;
-	size_t	len;
+	int	srcsize;
+	int	len;
 
 	if (!dst || !src)
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 17:45:53 by lraffin           #+#    #+#             */
-/*   Updated: 2021/04/19 01:13:43 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/11/11 17:51:38 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	size_t	i;
+	int		i;
 
 	if (!s)
 		return (NULL);
