@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/11/11 21:27:23 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/11/17 02:39:10 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,9 @@ void		ft_putstr(const char *s);
 void		*ft_realloc(void *ptr, size_t size);
 char		**ft_split_on_first(const char *s, char c);
 char		**ft_split(const char *s, char c);
-int			str_is_equal(const char *s1, const char *s2);
+int			str_is_alnum(char *s);
 int			str_is_digit(char *s);
+int			str_is_equal(const char *s1, const char *s2);
 char		*ft_strchr(const char *s, int c);
 int			ft_strcmp(char *s1, char *s2);
 char		*ft_strcpy(char *dest, char *src);
