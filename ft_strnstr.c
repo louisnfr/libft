@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 15:10:49 by lraffin           #+#    #+#             */
-/*   Updated: 2021/11/18 23:57:02 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/11/18 23:57:33 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 
 	if (!needle || !haystack)
 		return (NULL);
-	printf("cheg\n");
 	i = 0;
 	while (haystack[i] && len && i < len)
 	{
