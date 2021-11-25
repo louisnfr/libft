@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/11/17 02:39:22 by lraffin          ###   ########.fr        #
+#    Updated: 2021/11/25 03:21:11 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,7 @@ SRC_NAME=	ft_abs.c \
 			ft_str_is_alnum.c \
 			ft_str_is_digit.c \
 			ft_str_is_equal.c \
+			ft_strcat.c \
 			ft_strchr.c \
 			ft_strcmp.c \
 			ft_strcpy.c \
