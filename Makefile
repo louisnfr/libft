@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/11/25 03:21:11 by lraffin          ###   ########.fr        #
+#    Updated: 2021/11/29 23:38:05 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC_NAME=	ft_abs.c \
 			ft_atoi_base.c \
 			ft_atol.c \
 			ft_atoi.c \
+			ft_atoull.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_clean_free.c \
