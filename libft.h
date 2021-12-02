@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/11/29 23:37:52 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/12/02 23:01:48 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ char				**ft_split(const char *s, char c);
 int					str_is_alnum(char *s);
 int					str_is_digit(char *s);
 int					str_is_equal(const char *s1, const char *s2);
+int					str_is_only_char(char *str, int c);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
 int					ft_strcmp(char *s1, char *s2);
