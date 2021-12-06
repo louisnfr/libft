@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2021/12/06 02:27:12 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/12/06 03:48:02 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,12 @@ static char	*_strjoin(char *s1, char *s2)
 	return (dest);
 }
 
+static int	clean_and_return(char **string, int error)
+{
+	clean_free(string);
+	return (error);
+}
+
 int	get_next_line(int fd, char **line)
 {
 	char	*buf;
@@ -42,16 +48,13 @@ int	get_next_line(int fd, char **line)
 	buf = ft_calloc(2, sizeof(char));
 	*line = ft_calloc(1, sizeof(char));
 	if (!line || (read(fd, buf, 0) < 0))
-	{
-		clean_free(&buf);
-		return (-1);
-	}
+		return (clean_and_return(&buf, -1));
 	ret = 1;
 	while (ret > 0)
 	{
 		ret = read(fd, buf, 1);
 		if (ret < 0 || !buf[0])
-			return (-1);
+			return (clean_and_return(&buf, -1));
 		if (buf[0] == '\n')
 			break ;
 		buf[ret] = 0;
