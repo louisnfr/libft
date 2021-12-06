@@ -6,13 +6,13 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2021/11/11 17:36:07 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/12/06 02:27:12 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*_strjoin(char *s1, char *s2)
+static char	*_strjoin(char *s1, char *s2)
 {
 	char	*dest;
 	int		length;
@@ -50,6 +50,8 @@ int	get_next_line(int fd, char **line)
 	while (ret > 0)
 	{
 		ret = read(fd, buf, 1);
+		if (ret < 0 || !buf[0])
+			return (-1);
 		if (buf[0] == '\n')
 			break ;
 		buf[ret] = 0;
