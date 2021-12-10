@@ -6,7 +6,7 @@
 /*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2021/12/06 03:48:02 by lraffin          ###   ########.fr       */
+/*   Updated: 2021/12/10 01:17:55 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,13 @@ int	get_next_line(int fd, char **line)
 	if (!line || (read(fd, buf, 0) < 0))
 		return (clean_and_return(&buf, -1));
 	ret = 1;
-	while (ret > 0)
+	while (ret != 0 && buf[0] != '\n')
 	{
 		ret = read(fd, buf, 1);
 		if (ret < 0 || !buf[0])
 			return (clean_and_return(&buf, -1));
-		if (buf[0] == '\n')
-			break ;
+		if (buf[0] == '\n' || buf[0] == 13)
+			continue ;
 		buf[ret] = 0;
 		*line = _strjoin(*line, buf);
 	}
