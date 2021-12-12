@@ -6,7 +6,7 @@
 #    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/12/09 19:23:28 by lraffin          ###   ########.fr        #
+#    Updated: 2021/12/12 16:18:15 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,14 +88,21 @@ SRC_NAME=	ft_abs.c \
 			ft_toupper.c \
 			get_next_line.c
 
+NOC		= \033[0m
+LBLUE	= \033[1;34m
+LRED	= \033[1;31m
+LGREEN	= \033[1;32m
+YELLOW	= \033[1;33m
+
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
 # Files
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+DEP = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.d))
 
 # Flags
-CC = gcc $(CFLAGS)
-CFLAGS = -Wall -Wextra -Werror
+CC = clang $(CFLAGS)
+CFLAGS = -Wall -Wextra -Werror -MMD -MP
 
 # Rules
 
@@ -104,10 +111,13 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
+	@echo "$(YELLOW)$@$(NOC)"
 
+-include $(DEP)
 $(OBJ_PATH)%.o: %.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@$(CC) -o $@ -c $<
+	@echo "$(LBLUE)clang $(NOC)$(notdir $@)"
 
 clean:
 	@rm -f $(OBJ)
