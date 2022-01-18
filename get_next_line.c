@@ -6,7 +6,7 @@
 /*   By: lraffin <lraffin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2022/01/18 14:45:36 by lraffin          ###   ########.fr       */
+/*   Updated: 2022/01/18 15:05:38 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	get_next_line(int fd, char **line)
 	while (ret != 0 && buf[0] != '\n')
 	{
 		ret = read(fd, buf, 1);
-		if (ret < 0 /*|| !buf[0]*/)
+		if (ret < 0)
 			return (clean_and_return(&buf, -1));
 		if (buf[0] == '\n' || buf[0] == 13)
 			continue ;
