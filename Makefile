@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lraffin <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: lraffin <lraffin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2021/12/12 16:18:15 by lraffin          ###   ########.fr        #
+#    Updated: 2022/01/25 14:57:53 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -111,15 +111,17 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "$(YELLOW)$@$(NOC)"
+	@echo "$(_SUCCESS) $(NAME)"
 
 -include $(DEP)
 $(OBJ_PATH)%.o: %.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	@echo "\t$(_YELLOW)Compiling$(_RESET) $*.c\r\c"
 	@$(CC) -o $@ -c $<
-	@echo "$(LBLUE)clang $(NOC)$(notdir $@)"
+	@echo "$(_CLEAR)"
 
 clean:
+	# @echo "$(_INFO)Deleting object files and directories"
 	@rm -f $(OBJ)
 	@rmdir $(OBJ_PATH) 2> /dev/null || true
 
@@ -139,3 +141,10 @@ push:
 	git push
 
 .PHONY: all clean fclean re norm push
+
+_YELLOW		=	\033[38;5;184m
+_GREEN		=	\033[38;5;46m
+_RESET		=	\033[0m
+_INFO		=	[$(_YELLOW)INFO$(_RESET)]
+_SUCCESS	=	[$(_GREEN)SUCCESS$(_RESET)]
+_CLEAR		=	\033[2K\c
