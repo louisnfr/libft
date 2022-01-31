@@ -6,7 +6,7 @@
 #    By: lraffin <lraffin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2022/01/27 20:29:50 by lraffin          ###   ########.fr        #
+#    Updated: 2022/01/31 22:09:25 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC_NAME=	ft_abs.c \
 			ft_isalpha.c \
 			ft_isascii.c \
 			ft_isdigit.c \
+			ft_isdigit_comma.c \
 			ft_isflag.c \
 			ft_isprint.c \
 			ft_isspace.c \
@@ -61,6 +62,8 @@ SRC_NAME=	ft_abs.c \
 			ft_putstr_ret.c \
 			ft_putstr.c \
 			ft_realloc.c \
+			ft_rgb_to_color.c \
+			ft_split_charset.c \
 			ft_split_on_first.c \
 			ft_split.c \
 			ft_str_is_alnum.c \
@@ -77,6 +80,7 @@ SRC_NAME=	ft_abs.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
+			ft_strlen_double_str.c \
 			ft_strmapi.c \
 			ft_strncmp.c \
 			ft_strnstr.c \

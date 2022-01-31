@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lraffin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: lraffin <lraffin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 01:39:18 by lraffin           #+#    #+#             */
-/*   Updated: 2021/12/02 23:01:48 by lraffin          ###   ########.fr       */
+/*   Updated: 2022/01/31 22:10:19 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,14 @@
 # define BUFFER_SIZE	32
 # define INT_MAX		2147483647
 # define INT_MIN		-214783648
+
+typedef enum s_boolean
+{
+	SUCCESS = 1,
+	FAILURE = 0,
+	TRUE = 1,
+	FALSE = 0
+}	t_boolean;
 
 int					ft_abs(int n);
 unsigned long long	ft_atoull(const char *str);
@@ -36,6 +44,7 @@ int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
+int					ft_isdigit_comma(int c, int *commas);
 int					ft_isflag(int c);
 int					ft_isprint(int c);
 int					ft_isspace(int c);
@@ -65,6 +74,8 @@ int					ft_putstr_n_ret(char *s, int n);
 int					ft_putstr_ret(char *s);
 void				ft_putstr(const char *s);
 void				*ft_realloc(void *ptr, size_t size);
+int					ft_rgb_to_color(int t, int r, int g, int b);
+char				**ft_split_charset(char *str, char *charset);
 char				**ft_split_on_first(const char *s, char c);
 char				**ft_split(const char *s, char c);
 int					str_is_alnum(char *s);
@@ -80,6 +91,7 @@ char				*ft_strjoin(char *s1, char *s2);
 char				*ft_strjoin_and_free(char *s1, char *s2);
 int					ft_strlcat(char *dst, const char *src, int dstsize);
 int					ft_strlcpy(char *dst, const char *src, int dstsize);
+int					ft_strlen_double_str(char **double_str);
 int					ft_strlen(const char *s);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strncmp(const char *s1, const char *s2, int n);
