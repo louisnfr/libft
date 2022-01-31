@@ -6,141 +6,146 @@
 #    By: lraffin <lraffin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/11 01:48:13 by lraffin           #+#    #+#              #
-#    Updated: 2022/01/31 22:09:25 by lraffin          ###   ########.fr        #
+#    Updated: 2022/01/31 23:50:53 by lraffin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Name
 NAME = libft.a
 
-# Path
-OBJ_PATH = ./obj/
+SRCS =				\
+		$(STRING)	\
+		$(ISTYPE)	\
+		$(MATH)		\
+		$(MEMORY)	\
+		$(PRINT)	\
 
-# Binary
-SRC_NAME=	ft_abs.c \
-			ft_atoi_base.c \
-			ft_atol.c \
-			ft_atoi.c \
-			ft_atoull.c \
-			ft_bzero.c \
-			ft_calloc.c \
-			ft_clean_free.c \
-			ft_free_double_str.c \
-			ft_isalnum.c \
-			ft_isalpha.c \
-			ft_isascii.c \
-			ft_isdigit.c \
-			ft_isdigit_comma.c \
-			ft_isflag.c \
-			ft_isprint.c \
-			ft_isspace.c \
-			ft_itoa.c \
-			ft_max.c \
-			ft_min.c \
-			ft_memccpy.c \
-			ft_memchr.c \
-			ft_memcmp.c \
-			ft_memcpy.c \
-			ft_memmove.c \
-			ft_memset.c \
-			ft_nbrlen_u.c \
-			ft_nbrlen_ul.c \
-			ft_nbrlen.c \
-			ft_put0xhexa_ret.c \
-			ft_putchar_fd.c \
-			ft_putchar_ret.c \
-			ft_putchar.c \
-			ft_putendl_fd.c \
-			ft_puthexa_ret.c \
-			ft_putnbr_fd.c \
-			ft_putnbr_ret.c \
-			ft_putnbr_u_ret.c \
-			ft_putnbr_u.c \
-			ft_putnbr.c \
-			ft_putstr_fd.c \
-			ft_putstr_n_ret.c \
-			ft_putstr_ret.c \
-			ft_putstr.c \
-			ft_realloc.c \
-			ft_rgb_to_color.c \
-			ft_split_charset.c \
-			ft_split_on_first.c \
-			ft_split.c \
-			ft_str_is_alnum.c \
-			ft_str_is_digit.c \
-			ft_str_is_equal.c \
-			ft_str_is_only_char.c \
-			ft_strcat.c \
-			ft_strchr.c \
-			ft_strcmp.c \
-			ft_strcpy.c \
-			ft_strdup.c \
-			ft_strjoin.c \
-			ft_strjoin_and_free.c \
-			ft_strlcat.c \
-			ft_strlcpy.c \
-			ft_strlen.c \
-			ft_strlen_double_str.c \
-			ft_strmapi.c \
-			ft_strncmp.c \
-			ft_strnstr.c \
-			ft_strrchr.c \
-			ft_strtrim.c \
-			ft_substr.c \
-			ft_swap.c \
-			ft_tolower.c \
-			ft_toupper.c \
-			get_next_line.c
+STRING =				\
+		ft_split_charset.c \
+		ft_split_on_first.c \
+		ft_split.c \
+		ft_strcat.c \
+		ft_strchr.c \
+		ft_strcmp.c \
+		ft_strcpy.c \
+		ft_strdup.c \
+		ft_strjoin.c \
+		ft_strjoin_and_free.c \
+		ft_strlcat.c \
+		ft_strlcpy.c \
+		ft_strlen.c \
+		ft_strlen_double_str.c \
+		ft_strmapi.c \
+		ft_strncmp.c \
+		ft_strnstr.c \
+		ft_strrchr.c \
+		ft_strtrim.c \
+		ft_substr.c \
+		ft_tolower.c \
+		ft_toupper.c \
+		get_next_line.c	\
 
-NOC		= \033[0m
-LBLUE	= \033[1;34m
-LRED	= \033[1;31m
-LGREEN	= \033[1;32m
-YELLOW	= \033[1;33m
+ISTYPE =			\
+		ft_isalnum.c \
+		ft_isalpha.c \
+		ft_isascii.c \
+		ft_isdigit.c \
+		ft_isdigit_comma.c \
+		ft_isflag.c \
+		ft_isprint.c \
+		ft_isspace.c \
+		ft_str_is_alnum.c \
+		ft_str_is_digit.c \
+		ft_str_is_equal.c \
+		ft_str_is_only_char.c \
 
-OBJ_NAME = $(SRC_NAME:.c=.o)
+MATH =				\
+		ft_abs.c	\
+		ft_atoi_base.c \
+		ft_atol.c	\
+		ft_atoi.c	\
+		ft_atoull.c	\
+		ft_itoa.c	\
+		ft_max.c	\
+		ft_min.c	\
+		ft_nbrlen_u.c \
+		ft_nbrlen_ul.c \
+		ft_nbrlen.c \
+		ft_rgb_to_color.c \
 
-# Files
-OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
-DEP = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.d))
+MEMORY =			\
+		ft_bzero.c	\
+		ft_calloc.c	\
+		ft_clean_free.c \
+		ft_free_double_str.c \
+		ft_memccpy.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_memset.c \
+		ft_realloc.c \
+		ft_swap.c \
 
-# Flags
-CC = clang $(CFLAGS)
-CFLAGS = -Wall -Wextra -Werror -MMD -MP
+PRINT =						\
+		ft_put0xhexa_ret.c	\
+		ft_putchar_fd.c		\
+		ft_putchar_ret.c	\
+		ft_putchar.c		\
+		ft_putendl_fd.c		\
+		ft_puthexa_ret.c	\
+		ft_putnbr_fd.c		\
+		ft_putnbr_ret.c		\
+		ft_putnbr_u_ret.c	\
+		ft_putnbr_u.c		\
+		ft_putnbr.c			\
+		ft_putstr_fd.c		\
+		ft_putstr_n_ret.c	\
+		ft_putstr_ret.c		\
+		ft_putstr.c			\
 
-# Rules
+INC_DIR = inc
+SRC_DIR = src
+OBJ_DIR = obj
+
+OBJS	= $(SRCS:%.c=$(OBJ_DIR)/%.o)
+DEPS	= $(OBJS:%.o=%.d)
+
+CC		= clang
+CFLAGS	= -Wall -Wextra -Werror -MMD -MP
+
+vpath %.c $(addprefix $(SRC_DIR)/, . string print memory math string/istype)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
+$(NAME): $(OBJS)
+	@ar -rcs $(NAME) $(OBJS)
 	@echo "$(_SUCCESS) $(NAME)"
 
--include $(DEP)
-$(OBJ_PATH)%.o: %.c
-	@mkdir $(OBJ_PATH) 2> /dev/null || true
+-include $(DEPS)
+$(OBJ_DIR)/%.o: %.c
+	@mkdir -p $(OBJ_DIR)
 	@echo "\t$(_YELLOW)compiling$(_RESET) $*.c\r\c"
-	@$(CC) -o $@ -c $<
+	@$(CC) $(CFLAGS) -I$(INC_DIR) -o $@ -c $<
 	@echo "$(_CLEAR)"
 
 clean:
-	@rm -f $(OBJ)
-	@rmdir $(OBJ_PATH) 2> /dev/null || true
+	@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	@rm -f $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all
 
 norm:
-	-@norminette *.c
-	-@norminette *.h
+	@echo "[$(_YELLOW)SOURCES$(_RESET)]"
+	-@norminette $(SRC_DIR)
+	@echo "[$(_YELLOW)INCLUDES$(_RESET)]"
+	-@norminette $(INC_DIR)
 
 push:
 	git add .
 	git status
-	git commit -m libft
+	git commit -m "libft (make push)"
 	git push
 
 .PHONY: all clean fclean re norm push

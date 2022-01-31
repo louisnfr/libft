@@ -6,13 +6,13 @@
 /*   By: lraffin <lraffin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:56:52 by lraffin           #+#    #+#             */
-/*   Updated: 2022/01/18 15:05:38 by lraffin          ###   ########.fr       */
+/*   Updated: 2022/01/31 23:19:28 by lraffin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*_strjoin(char *s1, char *s2)
+static char	*gnl_strjoin(char *s1, char *s2)
 {
 	char	*dest;
 	int		length;
@@ -58,7 +58,7 @@ int	get_next_line(int fd, char **line)
 		if (buf[0] == '\n' || buf[0] == 13)
 			continue ;
 		buf[ret] = 0;
-		*line = _strjoin(*line, buf);
+		*line = gnl_strjoin(*line, buf);
 	}
 	clean_free(&buf);
 	return (ret);
