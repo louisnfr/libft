@@ -1,6 +1,6 @@
 # Libft
 
-[![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/lraffin/Libft)](https://github.com/JaeSeoKim/badge42)
+[![lraffin's 42 Libft Score](https://badge42.vercel.app/api/v2/cl1i27ilm001109l1ep0jx30g/project/2178183)](https://github.com/JaeSeoKim/badge42)
 
 First project of the 42 cursus, 42Paris, May 2021.
 
